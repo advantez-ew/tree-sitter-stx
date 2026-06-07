@@ -1,0 +1,34 @@
+[package]
+name = "tree-sitter-stx"
+description = "Syntax highlighting for Jetter(Bucher) Automation controller programming language STX"
+version = "0.1.0"
+authors = ["Eric Wang <nohackwhl@hotmail.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["incremental", "parsing", "tree-sitter", "stx"]
+categories = ["parser-implementations", "parsing", "text-editors"]
+repository = "https://github.com/advantez-ew/tree-sitter-stx"
+edition = "2021"
+autoexamples = false
+
+build = "bindings/rust/build.rs"
+include = [
+  "bindings/rust/*",
+  "grammar.js",
+  "queries/*",
+  "src/*",
+  "tree-sitter.json",
+  "/LICENSE",
+]
+
+[lib]
+path = "bindings/rust/lib.rs"
+
+[dependencies]
+tree-sitter-language = "0.1"
+
+[build-dependencies]
+cc = "1.2"
+
+[dev-dependencies]
+tree-sitter = "0.26.9"

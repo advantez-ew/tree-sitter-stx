@@ -1,0 +1,43 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "stx",
+      "camelcase": "STX",
+      "title": "Jetter Structured Text",
+      "scope": "source.stxp",
+      "file-types": [
+        "stp",
+        "stxp"
+      ],
+      "injection-regex": "^stx$",
+      "class-name": "TreeSitterStx"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Syntax highlighting for Jetter(Bucher) Automation controller programming language STX",
+    "authors": [
+      {
+        "name": "Eric Wang",
+        "email": "nohackwhl@hotmail.com",
+        "url": "https://github.com/advantez-ew"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/advantez-ew/tree-sitter-stx",
+      "funding": "https://github.com/advantez-ew/tree-sitter-stx"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": false,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
